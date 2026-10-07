@@ -5,281 +5,115 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#087ff5">
 <title>GIRARD PEINTURE — Artisan peintre</title>
-<meta name="description" content="GIRARD PEINTURE — Peinture intérieure, extérieure, enduit façade et boiseries. Devis gratuit.">
 <style>
-:root{--blue:#087ff5;--blue2:#0b68d1;--navy:#071a31;--text:#10233e;--muted:#66778d;--light:#f5f9fd;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
-a{text-decoration:none;color:inherit}button,input,textarea{font:inherit}img{display:block;width:100%;object-fit:cover}
-.container{width:min(1180px,92%);margin:auto}
+:root{--blue:#087ff5;--navy:#071a31;--ink:#10233e;--muted:#66778d;--light:#f4f8fc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);overflow-x:hidden}a{text-decoration:none;color:inherit}img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{width:min(1160px,92%);margin:auto}
 
-/* HEADER */
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 4px 25px rgba(7,26,49,.12)}
-.nav{height:82px;width:min(1240px,94%);margin:auto;display:flex;align-items:center;gap:14px}
-.logo{display:flex;align-items:center;gap:12px;margin-right:auto}
-.logo-icon{width:52px;height:52px;border-radius:16px;background:var(--blue);color:white;display:grid;place-items:center;font-size:27px;font-weight:900;box-shadow:0 7px 18px rgba(8,127,245,.25)}
-.logo-name{line-height:1}
-.logo-name strong{display:block;font-size:20px;letter-spacing:1px}
-.logo-name span{display:block;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:3.5px;margin-top:6px}
-.desktop-menu{display:flex;align-items:center;gap:28px;font-weight:800}
-.desktop-menu a{transition:.2s}.desktop-menu a:hover{color:var(--blue)}
-.header-phone,.menu-btn{width:52px;height:52px;border:0;border-radius:15px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:23px;cursor:pointer}
-.menu-btn{display:none}
-.mobile-menu{display:none}
+/* header */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);box-shadow:0 3px 20px #071a3115}
+.nav{height:84px;width:min(1240px,94%);margin:auto;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:13px;margin-right:auto}.mark{width:54px;height:54px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:28px}.brand b{display:block;font-size:21px;letter-spacing:.8px;line-height:1}.brand small{display:block;color:var(--blue);font-weight:900;letter-spacing:3.5px;font-size:13px;margin-top:7px}
+.navlinks{display:flex;gap:28px;font-weight:800}.navlinks a:hover{color:var(--blue)}
+.phone,.hamb{width:54px;height:54px;border:0;border-radius:15px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:23px}.hamb{display:none}.mobile{display:none}
 
-/* HERO */
-.hero{min-height:100svh;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden}
-.hero-photo{position:absolute;inset:0;background:url("hero.jpg") center/cover no-repeat;transform:scale(1.02)}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,21,40,.92) 0%,rgba(3,21,40,.70) 50%,rgba(3,21,40,.22) 100%)}
-.hero-content{position:relative;z-index:2;width:min(1180px,92%);margin:85px auto 0}
-.kicker{font-size:13px;font-weight:900;letter-spacing:3px;margin:0 0 14px}
-.hero h1{font-size:clamp(43px,6.2vw,78px);line-height:1.02;letter-spacing:-2px;max-width:850px;margin:0 0 24px}
-.hero h1 span{color:#69b6ff}
-.hero-text{font-size:19px;line-height:1.55;max-width:680px;color:#edf6ff;margin:0 0 30px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{min-height:54px;padding:0 24px;border:0;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-weight:900;cursor:pointer;transition:.2s}
-.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue2);transform:translateY(-2px)}
-.btn-white{background:#fff;color:var(--text)}.btn-white:hover{transform:translateY(-2px)}
-.hero-checks{display:flex;gap:24px;flex-wrap:wrap;margin-top:27px;font-weight:750;font-size:14px}
-.down{position:absolute;z-index:4;bottom:24px;left:50%;transform:translateX(-50%);width:44px;height:44px;border:1px solid rgba(255,255,255,.6);border-radius:50%;display:grid;place-items:center;font-size:22px;color:#fff}
+/* hero */
+.hero{min-height:100svh;position:relative;color:#fff;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:url("hero.jpg") center/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#031528e8 0%,#0315289c 55%,#03152820 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:90px}
+.kicker{font-size:13px;letter-spacing:3px;font-weight:900;margin:0 0 14px}.hero h1{font-size:clamp(43px,6vw,76px);line-height:1.03;letter-spacing:-2px;margin:0 0 22px;max-width:850px}.hero h1 span{color:#66b4ff}.hero p{font-size:19px;max-width:680px;color:#edf6ff;margin:0 0 30px;line-height:1.55}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{min-height:54px;padding:0 25px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-weight:900;border:0}.primary{background:var(--blue);color:#fff}.secondary{background:#fff;color:var(--ink)}
+.points{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px;font-size:14px;font-weight:800}.scroll{position:absolute;z-index:4;bottom:22px;left:50%;transform:translateX(-50%);width:44px;height:44px;border:1px solid #ffffff88;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:22px}
 
-/* SECTIONS */
-.section{padding:100px 0}
-.light{background:var(--light)}
-.section-head{max-width:820px;margin-bottom:46px}
-.section-head.center{text-align:center;margin-left:auto;margin-right:auto}
-.kicker.blue{color:var(--blue)}
-h2{font-size:clamp(34px,4.5vw,56px);line-height:1.07;letter-spacing:-1.5px;margin:0 0 16px}
-h2 span{color:var(--blue)}
-.section-head p:last-child{color:var(--muted);font-size:18px}
+/* common */
+.section{padding:96px 0}.pale{background:var(--light)}.heading{max-width:820px;margin-bottom:44px}.heading.center{text-align:center;margin-left:auto;margin-right:auto}.blue{color:var(--blue)}h2{font-size:clamp(34px,4.5vw,56px);line-height:1.07;letter-spacing:-1.5px;margin:0 0 16px}h2 span{color:var(--blue)}.heading p:last-child{color:var(--muted);font-size:18px}
 
-/* SERVICES */
-.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.service{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 35px rgba(7,26,49,.10);transition:.3s}
-.service:hover{transform:translateY(-7px)}
-.service-img{height:235px}
-.service-body{padding:22px}
-.service-no{color:var(--blue);font-weight:900;font-size:13px}
-.service h3{font-size:22px;margin:7px 0}
-.service p{margin:0;color:var(--muted)}
+/* services */
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.service{display:grid;grid-template-columns:42% 58%;min-height:260px;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 12px 35px #071a3112}.service .photo{min-height:260px}.service .body{padding:28px}.num{font-size:13px;color:var(--blue);font-weight:900}.service h3{font-size:25px;margin:8px 0 10px}.service p{color:var(--muted);margin:0}
 
-/* REALISATIONS */
-.gallery{display:grid;grid-template-columns:1.45fr 1fr;grid-template-rows:270px 270px;gap:18px}
-.gallery figure{position:relative;margin:0;border-radius:18px;overflow:hidden}
-.gallery .large{grid-row:span 2}
-.gallery img{height:100%}
-.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px;color:#fff;font-weight:900;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+/* realisations */
+.gallery{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:260px 260px;gap:18px}.gallery figure{position:relative;margin:0;border-radius:20px;overflow:hidden}.gallery .big{grid-row:span 2}.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:20px;color:#fff;font-weight:900;background:linear-gradient(transparent,#000b)}
 
-/* BENEFITS */
-.navy{background:var(--navy);color:#fff}
-.navy .section-head p:last-child{color:#b9c8d8}
-.navy h2 span{color:#69b6ff}
-.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.benefit{padding:28px;border:1px solid rgba(255,255,255,.13);border-radius:17px}
-.benefit-no{color:#69b6ff;font-weight:900}.benefit h3{font-size:22px;margin:13px 0 7px}.benefit p{color:#b9c8d8;margin:0}
+/* benefits */
+.navy{background:var(--navy);color:#fff}.navy h2 span{color:#66b4ff}.navy .heading p:last-child{color:#b9c8d8}.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.benefit{border:1px solid #ffffff18;border-radius:18px;padding:28px}.benefit b{color:#66b4ff}.benefit h3{font-size:22px;margin:12px 0 7px}.benefit p{color:#b9c8d8;margin:0}
 
-/* REVIEWS */
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.review{background:#fff;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(7,26,49,.09)}
-.stars{color:var(--blue);letter-spacing:4px;font-size:19px}.review p{font-size:17px}.review small{font-weight:800}
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:#fff;border-radius:18px;padding:28px;box-shadow:0 10px 30px #071a3112}.stars{color:var(--blue);letter-spacing:4px}.review p{font-size:17px}
 
-/* CONTACT */
-.contact{padding:95px 0;background:var(--blue);color:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:start}
-.contact h2{font-size:clamp(42px,5vw,65px)}.contact h2 span{color:#cfeaff}
-.contact-copy>p{font-size:18px;color:#eaf5ff;max-width:580px}
-.phone-big{display:inline-block;margin-top:25px;font-size:25px;font-weight:900}
-.form{background:#fff;color:var(--text);border-radius:20px;padding:30px;box-shadow:0 20px 50px rgba(0,0,0,.18)}
-.form h3{font-size:27px;margin:0 0 15px}.form label{display:block;font-size:14px;font-weight:850;margin:13px 0}
-.form input,.form textarea{display:block;width:100%;padding:13px;border:1px solid #dbe5ef;border-radius:9px;margin-top:6px;outline:none}
-.form input:focus,.form textarea:focus{border-color:var(--blue)}
-.form .btn{width:100%;margin-top:10px}.form-note{font-size:12px;color:var(--muted);margin:10px 0 0}
+/* contact */
+.contact{background:var(--blue);color:#fff;padding:96px 0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h2 span{color:#cceaff}.contact-copy>p{font-size:18px;color:#e9f5ff;max-width:570px}.big-phone{font-size:25px;font-weight:900;display:inline-block;margin-top:25px}.form{background:#fff;color:var(--ink);padding:30px;border-radius:20px}.form h3{font-size:27px;margin:0 0 14px}.form label{font-size:14px;font-weight:800;display:block;margin:12px 0}.form input,.form textarea{width:100%;padding:13px;border:1px solid #dbe5ef;border-radius:9px;margin-top:6px}.form button{width:100%;margin-top:8px}.form small{color:var(--muted);display:block;margin-top:10px}
 
-/* FAQ */
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
-.faq details{border-bottom:1px solid #dbe5ef;padding:20px 0}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;font-size:18px;font-weight:850}
-.faq summary::-webkit-details-marker{display:none}.faq summary b{color:var(--blue);font-size:23px}.faq p{color:var(--muted);margin-bottom:0}
+/* faq/footer */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.faq details{border-bottom:1px solid #dbe5ef;padding:19px 0}.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;font-weight:900;font-size:18px}.faq summary::-webkit-details-marker{display:none}.faq summary b{color:var(--blue);font-size:23px}.faq p{color:var(--muted)}
+footer{background:#041224;color:#dbe5ef;padding-top:55px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px;padding-bottom:42px}.footer-brand{font-size:24px;font-weight:900;color:#fff}.footer-brand span{color:var(--blue)}.footer-links{display:flex;flex-direction:column;gap:11px}.footer p{color:#91a5ba}.copy{border-top:1px solid #ffffff14;text-align:center;padding:18px;color:#71879f;font-size:13px}
+.top{position:fixed;right:20px;bottom:20px;z-index:90;width:48px;height:48px;border:0;border-radius:50%;background:var(--blue);color:#fff;font-size:22px;opacity:0;visibility:hidden;transition:.2s}.top.show{opacity:1;visibility:visible}
 
-/* FOOTER */
-.footer{background:#041224;color:#dbe5ef;padding-top:55px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px;padding-bottom:42px}
-.footer-brand{font-size:24px;font-weight:900;color:#fff}.footer-brand span{color:var(--blue)}
-.footer p{color:#91a5ba}.footer-links{display:flex;flex-direction:column;gap:12px}.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:18px;text-align:center;color:#71879f;font-size:13px}
-.top{position:fixed;right:20px;bottom:20px;z-index:900;width:48px;height:48px;border:0;border-radius:50%;background:var(--blue);color:#fff;font-size:22px;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
-.top.show{opacity:1;visibility:visible;transform:none}
+/* reveal */
+.reveal{opacity:0;transform:translateY(25px);transition:.65s ease}.reveal.visible{opacity:1;transform:none}
 
-/* ANIMATIONS */
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:none}
-
-/* MOBILE */
-@media(max-width:900px){
- .desktop-menu{display:none}.menu-btn{display:grid}
- .mobile-menu.open{display:flex;flex-direction:column;background:#fff;padding:8px 5%;box-shadow:0 15px 25px rgba(7,26,49,.10)}
- .mobile-menu a{padding:14px 0;border-bottom:1px solid #edf2f7;font-weight:850}
- .mobile-menu a:last-child{color:var(--blue)}
- .service-grid,.benefits{grid-template-columns:repeat(2,1fr)}
- .review-grid{grid-template-columns:1fr}
- .contact-grid,.faq-grid{grid-template-columns:1fr;gap:42px}
- .footer-grid{grid-template-columns:1fr}
-}
-@media(max-width:620px){
- .nav{height:76px}.logo-icon{width:48px;height:48px;border-radius:15px}.logo-name strong{font-size:18px}.logo-name span{font-size:11px;letter-spacing:3px}
- .header-phone,.menu-btn{width:48px;height:48px;border-radius:15px}
- .hero{min-height:760px}.hero-photo{background-position:62% center}.hero-overlay{background:linear-gradient(90deg,rgba(3,21,40,.91),rgba(3,21,40,.58))}
- .hero-content{margin-top:85px}.hero h1{font-size:43px;letter-spacing:-1px}.hero-text{font-size:17px}
- .actions{flex-direction:column}.btn{width:100%}.hero-checks{flex-direction:column;gap:7px}
- .section{padding:72px 0}.service-grid,.benefits{grid-template-columns:1fr}
- .service-img{height:220px}.gallery{grid-template-columns:1fr;grid-template-rows:260px 220px 220px}.gallery .large{grid-row:auto}
- .contact{padding:72px 0}.form{padding:22px}
-}
+/* mobile */
+@media(max-width:900px){.navlinks{display:none}.hamb{display:grid}.mobile.open{display:flex;flex-direction:column;padding:8px 5%;background:#fff}.mobile a{padding:14px 0;border-bottom:1px solid #edf2f7;font-weight:850}.services{grid-template-columns:1fr}.benefits{grid-template-columns:repeat(2,1fr)}.reviews{grid-template-columns:1fr}.contact-grid,.faq-grid{grid-template-columns:1fr;gap:42px}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.nav{height:78px}.mark{width:50px;height:50px}.brand b{font-size:18px}.brand small{font-size:11px}.phone,.hamb{width:50px;height:50px}.hero{min-height:760px}.hero:before{background-position:62% center}.hero:after{background:linear-gradient(90deg,#031528ec,#03152872)}.hero .wrap{padding-top:85px}.hero h1{font-size:43px;letter-spacing:-1px}.hero p{font-size:17px}.actions{flex-direction:column}.btn{width:100%}.points{flex-direction:column;gap:7px}.section{padding:72px 0}.service{display:block}.service .photo{height:230px}.service .body{padding:24px}.gallery{grid-template-columns:1fr;grid-template-rows:260px 220px 220px}.gallery .big{grid-row:auto}.benefits{grid-template-columns:1fr}.contact{padding:72px 0}.form{padding:22px}}
 </style>
 </head>
 <body>
-
 <header class="header">
-  <div class="nav">
-    <a class="logo" href="#accueil">
-      <span class="logo-icon">⌂</span>
-      <span class="logo-name"><strong>GIRARD</strong><span>PEINTURE</span></span>
-    </a>
-    <nav class="desktop-menu">
-      <a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
-    </nav>
-    <a class="header-phone" href="tel:0618517866" aria-label="Téléphone">☎</a>
-    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false">☰</button>
-  </div>
-  <nav class="mobile-menu">
-    <a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
-    <a href="tel:0618517866">📞 06 18 51 78 66</a>
-  </nav>
+<div class="nav">
+<a class="brand" href="#accueil"><span class="mark">⌂</span><span><b>GIRARD</b><small>PEINTURE</small></span></a>
+<nav class="navlinks"><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a></nav>
+<a class="phone" href="tel:0618517866">☎</a><button class="hamb" aria-expanded="false">☰</button>
+</div>
+<nav class="mobile"><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a><a href="tel:0618517866">📞 06 18 51 78 66</a></nav>
 </header>
 
-<main>
 <section id="accueil" class="hero">
-  <div class="hero-photo"></div><div class="hero-overlay"></div>
-  <div class="hero-content reveal visible">
-    <p class="kicker">ARTISAN PEINTRE</p>
-    <h1>Un travail soigné<br><span>pour un résultat durable.</span></h1>
-    <p class="hero-text">Transformez votre intérieur et vos façades avec des finitions propres, durables et professionnelles.</p>
-    <div class="actions">
-      <a class="btn btn-blue" href="#contact">Demander un devis gratuit</a>
-      <a class="btn btn-white" href="tel:0618517866">06 18 51 78 66</a>
-    </div>
-    <div class="hero-checks"><span>✓ Devis gratuit</span><span>✓ Travail soigné</span><span>✓ Intervention rapide</span></div>
-  </div>
-  <a class="down" href="#services" aria-label="Défiler">↓</a>
+<div class="wrap reveal visible"><p class="kicker">ARTISAN PEINTRE</p><h1>Un travail soigné<br><span>pour un résultat durable.</span></h1><p>Transformez votre intérieur et vos façades avec des finitions propres, durables et professionnelles.</p><div class="actions"><a class="btn primary" href="#contact">Demander un devis gratuit</a><a class="btn secondary" href="tel:0618517866">06 18 51 78 66</a></div><div class="points"><span>✓ Devis gratuit</span><span>✓ Travail soigné</span><span>✓ Intervention rapide</span></div></div>
+<a class="scroll" href="#services">↓</a>
 </section>
 
 <section id="services" class="section">
-<div class="container">
-  <div class="section-head reveal"><p class="kicker blue">NOS SERVICES</p><h2>Des finitions propres,<br><span>à l'intérieur comme à l'extérieur.</span></h2><p>Chaque chantier est réalisé avec soin pour obtenir un résultat durable et esthétique.</p></div>
-  <div class="service-grid">
-    <article class="service reveal"><div class="service-img"><img src="interieur.jpg" alt="Peinture intérieure"></div><div class="service-body"><span class="service-no">01</span><h3>Peinture intérieure</h3><p>Murs, plafonds et pièces de vie avec des finitions nettes et régulières.</p></div></article>
-    <article class="service reveal"><div class="service-img"><img src="facade.jpg" alt="Peinture extérieure"></div><div class="service-body"><span class="service-no">02</span><h3>Peinture extérieure</h3><p>Rénovation et mise en peinture des façades pour protéger et embellir.</p></div></article>
-    <article class="service reveal"><div class="service-img"><img src="facade.jpg" alt="Enduit façade"></div><div class="service-body"><span class="service-no">03</span><h3>Enduit façade</h3><p>Préparation des supports, reprises et enduits pour une façade uniforme.</p></div></article>
-    <article class="service reveal"><div class="service-img"><img src="reference.jpg" alt="Boiseries"></div><div class="service-body"><span class="service-no">04</span><h3>Boiseries</h3><p>Portes, volets, escaliers et éléments bois remis en valeur avec soin.</p></div></article>
-  </div>
-</div>
+<div class="wrap"><div class="heading reveal"><p class="kicker blue">NOS SERVICES</p><h2>Des finitions propres,<br><span>à l'intérieur comme à l'extérieur.</span></h2><p>Chaque chantier est réalisé avec soin pour obtenir un résultat durable et esthétique.</p></div>
+<div class="services">
+<article class="service reveal"><div class="photo"><img src="interieur.jpg" alt="Peinture intérieure"></div><div class="body"><span class="num">01</span><h3>Peinture intérieure</h3><p>Murs, plafonds et pièces de vie avec des finitions nettes et régulières.</p></div></article>
+<article class="service reveal"><div class="photo"><img src="facade.jpg" alt="Peinture extérieure"></div><div class="body"><span class="num">02</span><h3>Peinture extérieure</h3><p>Rénovation et mise en peinture des façades pour protéger et embellir.</p></div></article>
+<article class="service reveal"><div class="photo"><img src="facade.jpg" alt="Enduit façade"></div><div class="body"><span class="num">03</span><h3>Enduit façade</h3><p>Préparation des supports, reprises et enduits pour une façade uniforme.</p></div></article>
+<article class="service reveal"><div class="photo"><img src="reference.jpg" alt="Boiseries"></div><div class="body"><span class="num">04</span><h3>Boiseries</h3><p>Portes, volets, escaliers et éléments bois remis en valeur avec soin.</p></div></article>
+</div></div>
 </section>
 
-<section id="realisations" class="section light">
-<div class="container">
-  <div class="section-head reveal"><p class="kicker blue">NOS RÉALISATIONS</p><h2>Avant, après : <span>le résultat fait la différence.</span></h2></div>
-  <div class="gallery">
-    <figure class="large reveal"><img src="realisations.jpg" alt="Réalisation Girard Peinture"><figcaption>Rénovation & finition</figcaption></figure>
-    <figure class="reveal"><img src="facade.jpg" alt="Façade rénovée"><figcaption>Façade extérieure</figcaption></figure>
-    <figure class="reveal"><img src="interieur.jpg" alt="Intérieur rénové"><figcaption>Peinture intérieure</figcaption></figure>
-  </div>
-</div>
+<section id="realisations" class="section pale">
+<div class="wrap"><div class="heading reveal"><p class="kicker blue">NOS RÉALISATIONS</p><h2>Avant, après : <span>le résultat fait la différence.</span></h2></div>
+<div class="gallery"><figure class="big reveal"><img src="realisations.jpg" alt="Réalisation"><figcaption>Rénovation & finition</figcaption></figure><figure class="reveal"><img src="facade.jpg" alt="Façade"><figcaption>Façade extérieure</figcaption></figure><figure class="reveal"><img src="interieur.jpg" alt="Intérieur"><figcaption>Peinture intérieure</figcaption></figure></div></div>
 </section>
 
-<section class="section navy">
-<div class="container">
-  <div class="section-head center reveal"><p class="kicker">POURQUOI NOUS CHOISIR ?</p><h2>Un chantier sérieux,<br><span>du premier contact à la finition.</span></h2></div>
-  <div class="benefits">
-    <div class="benefit reveal"><span class="benefit-no">01</span><h3>Finitions pro</h3><p>Des supports préparés et un travail précis jusque dans les détails.</p></div>
-    <div class="benefit reveal"><span class="benefit-no">02</span><h3>Devis gratuit</h3><p>Une estimation claire et adaptée à votre projet.</p></div>
-    <div class="benefit reveal"><span class="benefit-no">03</span><h3>Intervention rapide</h3><p>Une organisation efficace pour avancer rapidement.</p></div>
-    <div class="benefit reveal"><span class="benefit-no">04</span><h3>Respect des délais</h3><p>Un engagement sérieux sur le planning défini ensemble.</p></div>
-  </div>
-</div>
-</section>
+<section class="section navy"><div class="wrap"><div class="heading center reveal"><p class="kicker">POURQUOI NOUS CHOISIR ?</p><h2>Un chantier sérieux,<br><span>du premier contact à la finition.</span></h2></div><div class="benefits">
+<div class="benefit reveal"><b>01</b><h3>Finitions pro</h3><p>Des supports préparés et un travail précis jusque dans les détails.</p></div>
+<div class="benefit reveal"><b>02</b><h3>Devis gratuit</h3><p>Une estimation claire et adaptée à votre projet.</p></div>
+<div class="benefit reveal"><b>03</b><h3>Intervention rapide</h3><p>Une organisation efficace pour avancer rapidement.</p></div>
+<div class="benefit reveal"><b>04</b><h3>Respect des délais</h3><p>Un engagement sérieux sur le planning défini ensemble.</p></div>
+</div></div></section>
 
-<section id="avis" class="section light">
-<div class="container">
-  <div class="section-head center reveal"><p class="kicker blue">AVIS CLIENTS</p><h2>Ils parlent de <span>leur expérience.</span></h2></div>
-  <div class="review-grid">
-    <article class="review reveal"><div class="stars">★★★★★</div><p>« Travail très propre, chantier laissé impeccable. Je recommande pour le sérieux et la qualité. »</p><small>Client particulier</small></article>
-    <article class="review reveal"><div class="stars">★★★★★</div><p>« Très bon contact, conseils efficaces et résultat conforme à nos attentes. »</p><small>Client particulier</small></article>
-    <article class="review reveal"><div class="stars">★★★★★</div><p>« Une façade transformée. Travail soigné et délais respectés. »</p><small>Client particulier</small></article>
-  </div>
-</div>
-</section>
+<section id="avis" class="section pale"><div class="wrap"><div class="heading center reveal"><p class="kicker blue">AVIS CLIENTS</p><h2>Ils parlent de <span>leur expérience.</span></h2></div><div class="reviews">
+<div class="review reveal"><div class="stars">★★★★★</div><p>« Travail très propre, chantier laissé impeccable. Je recommande pour le sérieux et la qualité. »</p><b>Client particulier</b></div>
+<div class="review reveal"><div class="stars">★★★★★</div><p>« Très bon contact, conseils efficaces et résultat conforme à nos attentes. »</p><b>Client particulier</b></div>
+<div class="review reveal"><div class="stars">★★★★★</div><p>« Une façade transformée. Travail soigné et délais respectés. »</p><b>Client particulier</b></div>
+</div></div></section>
 
-<section id="contact" class="contact">
-<div class="container contact-grid">
-  <div class="contact-copy reveal">
-    <p class="kicker">CONTACT</p><h2>Parlons de<br><span>votre projet.</span></h2>
-    <p>Besoin de repeindre une pièce, une façade ou de rénover vos boiseries ? Contactez-nous pour échanger sur votre projet et demander votre devis gratuit.</p>
-    <a class="phone-big" href="tel:0618517866">☎ &nbsp;06 18 51 78 66</a>
-  </div>
-  <form class="form reveal" action="mailto:contact@girard-peinture.fr" method="post" enctype="text/plain">
-    <h3>Demander un devis gratuit</h3>
-    <label>Nom<input name="Nom" required placeholder="Votre nom"></label>
-    <label>Téléphone<input name="Téléphone" type="tel" required placeholder="06 00 00 00 00"></label>
-    <label>Email<input name="Email" type="email" placeholder="votre@email.fr"></label>
-    <label>Votre projet<textarea name="Projet" rows="5" required placeholder="Décrivez votre projet..."></textarea></label>
-    <button class="btn btn-blue" type="submit">Envoyer ma demande →</button>
-    <p class="form-note">Le formulaire ouvre votre application e-mail pour envoyer la demande.</p>
-  </form>
-</div>
-</section>
+<section id="contact" class="contact"><div class="wrap contact-grid"><div class="contact-copy reveal"><p class="kicker">CONTACT</p><h2>Parlons de<br><span>votre projet.</span></h2><p>Besoin de repeindre une pièce, une façade ou de rénover vos boiseries ? Contactez-nous pour échanger sur votre projet et demander votre devis gratuit.</p><a class="big-phone" href="tel:0618517866">☎ &nbsp;06 18 51 78 66</a></div>
+<form class="form reveal" action="mailto:contact@girard-peinture.fr" method="post" enctype="text/plain"><h3>Demander un devis gratuit</h3><label>Nom<input name="Nom" required placeholder="Votre nom"></label><label>Téléphone<input name="Téléphone" required placeholder="06 00 00 00 00"></label><label>Email<input name="Email" type="email" placeholder="votre@email.fr"></label><label>Votre projet<textarea name="Projet" rows="5" required placeholder="Décrivez votre projet..."></textarea></label><button class="btn primary" type="submit">Envoyer ma demande →</button><small>Votre demande sera préparée dans votre application e-mail.</small></form></div></section>
 
-<section class="section">
-<div class="container faq-grid">
-  <div class="section-head reveal"><p class="kicker blue">FAQ</p><h2>Les questions<br><span>les plus fréquentes.</span></h2></div>
-  <div class="faq">
-    <details class="reveal"><summary>Le devis est-il gratuit ? <b>+</b></summary><p>Oui. Contactez-nous pour présenter votre projet et obtenir une estimation adaptée.</p></details>
-    <details class="reveal"><summary>Quels travaux réalisez-vous ? <b>+</b></summary><p>Peinture intérieure, peinture extérieure, enduit façade et travaux de boiseries.</p></details>
-    <details class="reveal"><summary>Comment prendre rendez-vous ? <b>+</b></summary><p>Appelez le 06 18 51 78 66 ou utilisez le formulaire de contact.</p></details>
-  </div>
-</div>
-</section>
-</main>
+<section class="section"><div class="wrap faq-grid"><div class="heading reveal"><p class="kicker blue">FAQ</p><h2>Les questions<br><span>les plus fréquentes.</span></h2></div><div class="faq">
+<details class="reveal"><summary>Le devis est-il gratuit ? <b>+</b></summary><p>Oui. Contactez-nous pour présenter votre projet et obtenir une estimation adaptée.</p></details>
+<details class="reveal"><summary>Quels travaux réalisez-vous ? <b>+</b></summary><p>Peinture intérieure, extérieure, enduit façade et boiseries.</p></details>
+<details class="reveal"><summary>Comment prendre rendez-vous ? <b>+</b></summary><p>Appelez le 06 18 51 78 66 ou utilisez le formulaire.</p></details>
+</div></div></section>
 
-<footer class="footer">
-<div class="container footer-grid">
-  <div><div class="footer-brand">GIRARD <span>PEINTURE</span></div><p>Peinture intérieure · extérieure · Enduit façade · Boiseries</p></div>
-  <div class="footer-links"><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a></div>
-  <div class="footer-links"><a href="tel:0618517866">06 18 51 78 66</a><a href="mailto:contact@girard-peinture.fr">contact@girard-peinture.fr</a></div>
-</div>
-<div class="footer-bottom">© 2026 GIRARD PEINTURE — Tous droits réservés.</div>
-</footer>
-<button class="top" type="button" aria-label="Retour en haut">↑</button>
-
+<footer><div class="wrap footer-grid"><div><div class="footer-brand">GIRARD <span>PEINTURE</span></div><p>Peinture intérieure · extérieure · Enduit façade · Boiseries</p></div><div class="footer-links"><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a></div><div class="footer-links"><a href="tel:0618517866">06 18 51 78 66</a><a href="mailto:contact@girard-peinture.fr">contact@girard-peinture.fr</a></div></div><div class="copy">© 2026 GIRARD PEINTURE — Tous droits réservés.</div></footer>
+<button class="top" aria-label="Retour en haut">↑</button>
 <script>
-const menu=document.querySelector(".menu-btn"), mobile=document.querySelector(".mobile-menu");
-if(menu&&mobile){
-  menu.addEventListener("click",()=>{
-    const open=mobile.classList.toggle("open");
-    menu.setAttribute("aria-expanded",open?"true":"false");
-  });
-  mobile.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
-    mobile.classList.remove("open");menu.setAttribute("aria-expanded","false");
-  }));
-}
-const top=document.querySelector(".top");
-window.addEventListener("scroll",()=>{
-  if(top) top.classList.toggle("show",window.scrollY>500);
-},{passive:true});
-top?.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")});
-},{threshold:.12});
-document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
+const h=document.querySelector(".hamb"),m=document.querySelector(".mobile");h?.addEventListener("click",()=>{const o=m.classList.toggle("open");h.setAttribute("aria-expanded",o)});m?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>m.classList.remove("open")));
+const t=document.querySelector(".top");addEventListener("scroll",()=>t?.classList.toggle("show",scrollY>500),{passive:true});t?.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("visible")),{threshold:.12});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
 </script>
-</body>
-</html>
+</body></html>
