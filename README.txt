@@ -1,1 +1,1 @@
-V2 Girard Peinture — design renforcé inspiré du visuel fourni. Ouvrir index.html. Modifier téléphone/email/textes et remplacer les images dans assets/.
+Girard Peinture V3 — site vitrine responsive. Remplacer les coordonnées, photos et textes avant mise en production.
