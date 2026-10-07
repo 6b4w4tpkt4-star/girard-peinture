@@ -1,181 +1,71 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="GIRARD PEINTURE — Peinture intérieure, extérieure, enduit façade et boiseries. Devis gratuit.">
-  <title>GIRARD PEINTURE — Artisan peintre</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIRARD PEINTURE — Artisan peintre</title>
+<meta name="description" content="GIRARD PEINTURE — Peinture intérieure, extérieure, enduit façade et boiseries.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="header">
-  <div class="nav-wrap">
-    <a class="brand" href="#accueil" aria-label="GIRARD PEINTURE - Accueil">
-      <span class="brand-mark">⌂</span>
-      <span class="brand-text"><strong>GIRARD</strong><small>PEINTURE</small></span>
-    </a>
-
-    <nav class="desktop-nav" aria-label="Navigation principale">
-      <a href="#services">Services</a>
-      <a href="#realisations">Réalisations</a>
-      <a href="#avis">Avis</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="phone-btn" href="tel:0618517866" aria-label="Appeler GIRARD PEINTURE">☎</a>
-    <button class="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  <div class="nav">
+    <a class="logo" href="#accueil"><span class="logo-icon">⌂</span><span><b>GIRARD</b><small>PEINTURE</small></span></a>
+    <nav class="links"><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a></nav>
+    <a class="tel" href="tel:0618517866">☎</a>
+    <button class="hamb" aria-label="Menu" aria-expanded="false">☰</button>
   </div>
-
-  <nav class="mobile-nav" aria-label="Navigation mobile">
-    <a href="#services">Services</a>
-    <a href="#realisations">Réalisations</a>
-    <a href="#avis">Avis</a>
-    <a href="#contact">Contact</a>
-    <a class="mobile-call" href="tel:0618517866">Appeler : 06 18 51 78 66</a>
-  </nav>
+  <nav class="mobile"><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a><a href="tel:0618517866">06 18 51 78 66</a></nav>
 </header>
 
-<main>
-  <section id="accueil" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content reveal visible">
-      <p class="eyebrow">ARTISAN PEINTRE</p>
-      <h1>Un travail soigné<br><span>pour un résultat durable.</span></h1>
-      <p class="hero-sub">Transformez votre intérieur et vos façades avec des finitions propres, durables et professionnelles.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Demander un devis gratuit</a>
-        <a class="btn btn-light" href="tel:0618517866">06 18 51 78 66</a>
-      </div>
-      <div class="hero-points">
-        <span>✓ Devis gratuit</span>
-        <span>✓ Travail soigné</span>
-        <span>✓ Intervention rapide</span>
-      </div>
-    </div>
-    <a class="scroll-down" href="#services" aria-label="Faire défiler vers les services">↓</a>
-  </section>
-
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow blue">NOS SERVICES</p>
-        <h2>Des finitions propres,<br><span>à l'intérieur comme à l'extérieur.</span></h2>
-        <p>Chaque chantier est réalisé avec soin pour obtenir un résultat durable et esthétique.</p>
-      </div>
-
-      <div class="cards services-grid">
-        <article class="service-card reveal">
-          <img src="interieur.jpg" alt="Peinture intérieure">
-          <div class="card-body"><span class="number">01</span><h3>Peinture intérieure</h3><p>Murs, plafonds et pièces de vie avec des finitions nettes et régulières.</p></div>
-        </article>
-        <article class="service-card reveal">
-          <img src="facade.jpg" alt="Peinture extérieure">
-          <div class="card-body"><span class="number">02</span><h3>Peinture extérieure</h3><p>Rénovation et mise en peinture des façades pour protéger et embellir.</p></div>
-        </article>
-        <article class="service-card reveal">
-          <img src="facade.jpg" alt="Enduit façade">
-          <div class="card-body"><span class="number">03</span><h3>Enduit façade</h3><p>Préparation des supports, reprises et enduits pour une façade uniforme.</p></div>
-        </article>
-        <article class="service-card reveal">
-          <img src="reference.jpg" alt="Boiseries">
-          <div class="card-body"><span class="number">04</span><h3>Boiseries</h3><p>Portes, volets, escaliers et éléments bois remis en valeur avec soin.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="realisations" class="section section-light">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow blue">NOS RÉALISATIONS</p>
-        <h2>Avant, après : <span>le résultat fait la différence.</span></h2>
-      </div>
-      <div class="gallery">
-        <figure class="gallery-main reveal"><img src="realisations.jpg" alt="Réalisation Girard Peinture"><figcaption>Rénovation & finition</figcaption></figure>
-        <figure class="gallery-side reveal"><img src="facade.jpg" alt="Façade rénovée"><figcaption>Façade extérieure</figcaption></figure>
-        <figure class="gallery-side reveal"><img src="interieur.jpg" alt="Intérieur peint"><figcaption>Peinture intérieure</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section benefits">
-    <div class="container">
-      <div class="section-head center reveal">
-        <p class="eyebrow">POURQUOI NOUS CHOISIR ?</p>
-        <h2>Un chantier sérieux,<br><span>du premier contact à la finition.</span></h2>
-      </div>
-      <div class="benefits-grid">
-        <div class="benefit reveal"><b>01</b><h3>Finitions pro</h3><p>Des supports préparés et un travail précis jusque dans les détails.</p></div>
-        <div class="benefit reveal"><b>02</b><h3>Devis gratuit</h3><p>Une estimation claire et adaptée à votre projet.</p></div>
-        <div class="benefit reveal"><b>03</b><h3>Intervention rapide</h3><p>Une organisation efficace pour avancer rapidement sur votre chantier.</p></div>
-        <div class="benefit reveal"><b>04</b><h3>Respect des délais</h3><p>Un engagement sérieux sur le planning défini ensemble.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="avis" class="section reviews">
-    <div class="container">
-      <div class="section-head center reveal">
-        <p class="eyebrow blue">AVIS CLIENTS</p>
-        <h2>Ils parlent de <span>leur expérience.</span></h2>
-      </div>
-      <div class="reviews-grid">
-        <article class="review reveal"><div class="stars">★★★★★</div><p>« Travail très propre, chantier laissé impeccable. Je recommande pour le sérieux et la qualité. »</p><strong>Client particulier</strong></article>
-        <article class="review reveal"><div class="stars">★★★★★</div><p>« Très bon contact, conseils efficaces et résultat conforme à nos attentes. »</p><strong>Client particulier</strong></article>
-        <article class="review reveal"><div class="stars">★★★★★</div><p>« Une façade transformée. Travail soigné et délais respectés. »</p><strong>Client particulier</strong></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact-section">
-    <div class="container contact-grid">
-      <div class="contact-copy reveal">
-        <p class="eyebrow">CONTACT</p>
-        <h2>Parlons de<br><span>votre projet.</span></h2>
-        <p>Besoin de repeindre une pièce, une façade ou de rénover vos boiseries ? Contactez-nous pour échanger sur votre projet et demander votre devis gratuit.</p>
-        <a class="contact-phone" href="tel:0618517866"><span>☎</span><strong>06 18 51 78 66</strong></a>
-      </div>
-
-      <form class="contact-form reveal" action="mailto:contact@girard-peinture.fr" method="post" enctype="text/plain">
-        <h3>Demander un devis gratuit</h3>
-        <label>Nom<input name="Nom" type="text" placeholder="Votre nom" required></label>
-        <label>Téléphone<input name="Téléphone" type="tel" placeholder="06 00 00 00 00" required></label>
-        <label>Email<input name="Email" type="email" placeholder="votre@email.fr"></label>
-        <label>Votre projet<textarea name="Projet" rows="5" placeholder="Décrivez votre projet..." required></textarea></label>
-        <button class="btn btn-primary submit" type="submit">Envoyer ma demande →</button>
-        <small>Votre demande sera préparée dans votre application e-mail.</small>
-      </form>
-    </div>
-  </section>
-
-  <section class="section faq-section">
-    <div class="container faq-wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow blue">FAQ</p>
-        <h2>Les questions<br><span>les plus fréquentes.</span></h2>
-      </div>
-      <div class="faq">
-        <details class="reveal"><summary>Le devis est-il gratuit ? <span>+</span></summary><p>Oui. Contactez-nous pour présenter votre projet et obtenir une estimation adaptée.</p></details>
-        <details class="reveal"><summary>Quels travaux réalisez-vous ? <span>+</span></summary><p>Peinture intérieure, peinture extérieure, enduit façade et travaux de boiseries.</p></details>
-        <details class="reveal"><summary>Intervenez-vous pour les particuliers ? <span>+</span></summary><p>Oui, les projets de rénovation et de mise en peinture des particuliers sont les bienvenus.</p></details>
-        <details class="reveal"><summary>Comment prendre rendez-vous ? <span>+</span></summary><p>Appelez directement le 06 18 51 78 66 ou envoyez une demande depuis le formulaire.</p></details>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div><div class="footer-brand">GIRARD <span>PEINTURE</span></div><p>Peinture intérieure · extérieure · Enduit façade · Boiseries</p></div>
-    <div><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#contact">Contact</a></div>
-    <div><a href="tel:0618517866">06 18 51 78 66</a><a href="mailto:contact@girard-peinture.fr">contact@girard-peinture.fr</a></div>
+<section id="accueil" class="hero">
+  <div class="hero-image"></div><div class="hero-shade"></div>
+  <div class="hero-inner">
+    <div class="tag">ARTISAN PEINTRE</div>
+    <h1>Un travail soigné<br><em>pour un résultat durable.</em></h1>
+    <p>Transformez votre intérieur et vos façades avec des finitions propres, durables et professionnelles.</p>
+    <div class="actions"><a class="btn blue" href="#contact">Demander un devis gratuit</a><a class="btn white" href="tel:0618517866">06 18 51 78 66</a></div>
+    <div class="checks"><span>✓ Devis gratuit</span><span>✓ Travail soigné</span><span>✓ Intervention rapide</span></div>
   </div>
-  <div class="footer-bottom">© 2026 GIRARD PEINTURE — Tous droits réservés.</div>
-</footer>
+  <a class="down" href="#services">↓</a>
+</section>
 
-<button class="back-top" type="button" aria-label="Retour en haut">↑</button>
+<section id="services" class="section">
+<div class="wrap"><div class="intro"><div class="tag blue-text">NOS SERVICES</div><h2>Des finitions propres,<br><em>à l'intérieur comme à l'extérieur.</em></h2><p>Chaque chantier est réalisé avec soin pour obtenir un résultat durable et esthétique.</p></div>
+<div class="cards">
+<article><img src="interieur.jpg"><div><b>01</b><h3>Peinture intérieure</h3><p>Murs, plafonds et pièces de vie avec des finitions nettes et régulières.</p></div></article>
+<article><img src="facade.jpg"><div><b>02</b><h3>Peinture extérieure</h3><p>Rénovation et mise en peinture des façades pour protéger et embellir.</p></div></article>
+<article><img src="facade.jpg"><div><b>03</b><h3>Enduit façade</h3><p>Préparation des supports, reprises et enduits pour une façade uniforme.</p></div></article>
+<article><img src="reference.jpg"><div><b>04</b><h3>Boiseries</h3><p>Portes, volets, escaliers et éléments bois remis en valeur avec soin.</p></div></article>
+</div></div>
+</section>
+
+<section id="realisations" class="section pale"><div class="wrap"><div class="intro"><div class="tag blue-text">NOS RÉALISATIONS</div><h2>Avant, après : <em>le résultat fait la différence.</em></h2></div>
+<div class="gallery"><figure class="big"><img src="realisations.jpg"><figcaption>Rénovation & finition</figcaption></figure><figure><img src="facade.jpg"><figcaption>Façade extérieure</figcaption></figure><figure><img src="interieur.jpg"><figcaption>Peinture intérieure</figcaption></figure></div></div></section>
+
+<section class="section dark"><div class="wrap"><div class="intro center"><div class="tag">POURQUOI NOUS CHOISIR ?</div><h2>Un chantier sérieux,<br><em>du premier contact à la finition.</em></h2></div><div class="features">
+<div><b>01</b><h3>Finitions pro</h3><p>Des supports préparés et un travail précis jusque dans les détails.</p></div>
+<div><b>02</b><h3>Devis gratuit</h3><p>Une estimation claire et adaptée à votre projet.</p></div>
+<div><b>03</b><h3>Intervention rapide</h3><p>Une organisation efficace pour avancer rapidement.</p></div>
+<div><b>04</b><h3>Respect des délais</h3><p>Un engagement sérieux sur le planning défini ensemble.</p></div>
+</div></div></section>
+
+<section id="avis" class="section pale"><div class="wrap"><div class="intro center"><div class="tag blue-text">AVIS CLIENTS</div><h2>Ils parlent de <em>leur expérience.</em></h2></div><div class="reviews">
+<div><strong>★★★★★</strong><p>« Travail très propre, chantier laissé impeccable. Je recommande. »</p><b>Client particulier</b></div>
+<div><strong>★★★★★</strong><p>« Très bon contact, conseils efficaces et résultat conforme à nos attentes. »</p><b>Client particulier</b></div>
+<div><strong>★★★★★</strong><p>« Une façade transformée. Travail soigné et délais respectés. »</p><b>Client particulier</b></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap contact-grid"><div><div class="tag">CONTACT</div><h2>Parlons de<br><em>votre projet.</em></h2><p>Besoin de repeindre une pièce, une façade ou de rénover vos boiseries ? Contactez-nous pour échanger sur votre projet et demander votre devis gratuit.</p><a class="contact-tel" href="tel:0618517866">☎ &nbsp;06 18 51 78 66</a></div>
+<form action="mailto:contact@girard-peinture.fr" method="post" enctype="text/plain"><h3>Demander un devis gratuit</h3><label>Nom<input name="Nom" required placeholder="Votre nom"></label><label>Téléphone<input name="Téléphone" type="tel" required placeholder="06 00 00 00 00"></label><label>Email<input name="Email" type="email" placeholder="votre@email.fr"></label><label>Votre projet<textarea name="Projet" rows="5" required placeholder="Décrivez votre projet..."></textarea></label><button class="btn blue" type="submit">Envoyer ma demande →</button></form></div></section>
+
+<section class="section"><div class="wrap faq-grid"><div class="intro"><div class="tag blue-text">FAQ</div><h2>Les questions<br><em>les plus fréquentes.</em></h2></div><div class="faq">
+<details><summary>Le devis est-il gratuit ? <b>+</b></summary><p>Oui. Contactez-nous pour présenter votre projet et obtenir une estimation adaptée.</p></details>
+<details><summary>Quels travaux réalisez-vous ? <b>+</b></summary><p>Peinture intérieure, extérieure, enduit façade et boiseries.</p></details>
+<details><summary>Comment prendre rendez-vous ? <b>+</b></summary><p>Appelez le 06 18 51 78 66 ou utilisez le formulaire de contact.</p></details>
+</div></div></section>
+
+<footer><div class="wrap foot"><div><h3>GIRARD <span>PEINTURE</span></h3><p>Peinture intérieure · extérieure · Enduit façade · Boiseries</p></div><div><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#contact">Contact</a></div><div><a href="tel:0618517866">06 18 51 78 66</a><a href="mailto:contact@girard-peinture.fr">contact@girard-peinture.fr</a></div></div><div class="copyright">© 2026 GIRARD PEINTURE — Tous droits réservés.</div></footer>
+<button class="top" aria-label="Retour en haut">↑</button>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>
