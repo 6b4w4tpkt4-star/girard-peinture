@@ -1,0 +1,1 @@
+V2 Girard Peinture — design renforcé inspiré du visuel fourni. Ouvrir index.html. Modifier téléphone/email/textes et remplacer les images dans assets/.
