@@ -1,1 +1,1 @@
-Girard Peinture V3 — site vitrine responsive. Remplacer les coordonnées, photos et textes avant mise en production.
+Girard Peinture V3.1 — animations : apparition au défilement, effets hover, zoom léger du hero, boutons animés, cartes flottantes et navigation active. Respecte prefers-reduced-motion.
