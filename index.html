@@ -1,273 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GIRARD PEINTURE — Peinture intérieure, extérieure, enduit façade et boiseries. Devis gratuit.">
-<title>GIRARD PEINTURE — Peinture & rénovation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{--blue:#087ff5;--blue2:#126fe0;--navy:#071a32;--ink:#10233e;--muted:#64748b;--light:#f4f8fc;--line:#dbe5f0;--white:#fff;--radius:22px;--shadow:0 14px 40px rgba(15,35,62,.10)}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;width:100%;object-fit:cover}
-.container{width:min(1180px,calc(100% - 40px));margin:auto}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:12px;font-weight:800;transition:.25s;cursor:pointer;border:0}
-.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(8,127,245,.25)}
-.btn-primary:hover{transform:translateY(-2px);background:#006fe2}
-.btn-outline{border:2px solid var(--blue);color:var(--blue);background:#fff}
-.btn-outline:hover{background:#eef7ff}
-.section{padding:92px 0}
-.section-head{max-width:760px;margin-bottom:42px}
-.eyebrow{font-size:13px;letter-spacing:3px;font-weight:900;color:var(--blue);text-transform:uppercase;margin-bottom:12px}
-.kicker{display:inline-block;width:34px;height:5px;background:var(--blue);transform:skew(-28deg);margin-bottom:14px}
-h2{font-size:clamp(34px,5vw,54px);line-height:1.05;letter-spacing:-1.8px}
-.lead{font-size:18px;color:var(--muted);margin-top:14px}
-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(219,229,240,.7)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900}
-.brand-mark{width:48px;height:48px;border-radius:50%;background:var(--blue);display:grid;place-items:center;color:#fff;font-size:23px;box-shadow:0 6px 18px rgba(8,127,245,.22)}
-.brand-name{font-size:20px;line-height:1}
-.brand-name span{display:block;color:var(--blue);font-size:12px;letter-spacing:2.5px;margin-top:5px}
-.navlinks{display:flex;gap:26px;font-size:14px;font-weight:700}
-.navlinks a:hover{color:var(--blue)}
-.nav-actions{display:flex;align-items:center;gap:10px}
-.phone{background:var(--blue);color:#fff;padding:12px 17px;border-radius:11px;font-weight:800;font-size:14px}
-.menu{display:none;border:0;background:transparent;font-size:28px;color:var(--blue)}
-.hero{position:relative;min-height:650px;color:#fff;background:linear-gradient(90deg,rgba(5,25,48,.95) 0%,rgba(5,25,48,.78) 42%,rgba(5,25,48,.12) 75%),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero:after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(transparent,#061a31);opacity:.45}
-.hero-inner{position:relative;z-index:2;min-height:650px;display:flex;align-items:center;padding:75px 0}
-.hero-copy{max-width:650px}
-.hero h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-3px;margin:12px 0 24px}
-.hero h1 span{color:#1590ff}
-.hero .lead{color:#e3edf8;max-width:620px;font-size:19px}
-.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.hero .btn-outline{background:rgba(7,26,50,.35);color:#fff;border-color:#fff}
-.hero-points{display:flex;gap:25px;flex-wrap:wrap;margin-top:30px}
-.hero-point{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px}
-.check{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#0b77e6;font-weight:900}
-.services{background:#fff}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 25px rgba(15,35,62,.05);transition:.3s}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.card img{height:185px}
-.card-body{padding:20px}
-.icon{width:46px;height:46px;border:3px solid var(--blue);border-radius:50%;display:grid;place-items:center;color:var(--blue);background:#eff7ff;font-weight:900;margin-bottom:15px}
-.card h3{font-size:20px;margin-bottom:9px}
-.card p{color:var(--muted);font-size:14px}
-.list{list-style:none;margin:14px 0}
-.list li{margin:7px 0;color:#40546c;font-size:14px}
-.list li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:8px}
-.card-link{color:var(--blue);font-weight:800;font-size:14px}
-.gallery{background:var(--navy);color:#fff}
-.gallery .lead{color:#b9c8da}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.gallery-item{position:relative;height:330px;border-radius:18px;overflow:hidden}
-.gallery-item:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(3,15,30,.88))}
-.gallery-item img{height:100%;transition:.5s}
-.gallery-item:hover img{transform:scale(1.04)}
-.gallery-text{position:absolute;z-index:2;left:20px;right:20px;bottom:18px}
-.gallery-text strong{display:block;font-size:19px}.gallery-text span{color:#dce8f5}
-.center{text-align:center;margin-top:30px}
-.why{background:var(--light)}
-.why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
-.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.benefit{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center}
-.benefit .icon{margin:0 auto 13px}
-.benefit h3{font-size:17px}.benefit p{font-size:13px;color:var(--muted);margin-top:4px}
-.reviews{background:#fff}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.review{border:1px solid var(--line);border-radius:18px;padding:25px;background:#fff;box-shadow:0 8px 25px rgba(15,35,62,.05)}
-.stars{color:#f7ad16;letter-spacing:3px;font-size:18px}.review p{margin:15px 0;color:#40546c}.review strong{display:block}.review small{color:var(--muted)}
-.contact{background:linear-gradient(120deg,#087ff5,#0759c5);color:#fff;position:relative;overflow:hidden}
-.contact:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-180px;top:-260px;background:rgba(255,255,255,.08)}
-.contact-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.contact .lead{color:#e4f0ff}
-.contact-script{font-size:22px;font-style:italic;font-weight:700;margin-top:25px}
-.form{background:#fff;border-radius:20px;padding:28px;box-shadow:0 20px 50px rgba(2,40,100,.2)}
-.form input,.form textarea{width:100%;border:1px solid #d7e1ec;border-radius:12px;padding:15px;margin-bottom:12px;font:inherit;outline:none}
-.form input:focus,.form textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(8,127,245,.1)}
-.form textarea{min-height:130px;resize:vertical}
-.form .btn{width:100%}
-.form-note{text-align:center;color:#7a8797;font-size:12px;margin-top:10px}
-.faq{background:#f8fbfe}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
-summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between}
-summary:after{content:"+";color:var(--blue);font-size:20px}
-details[open] summary:after{content:"−"}
-details p{color:var(--muted);padding-top:12px;font-size:14px}
-footer{background:#06182e;color:#d4dfec;padding:60px 0 25px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:35px}
-footer .brand-name{color:#fff}.footer-title{color:#fff;font-weight:800;margin-bottom:15px}
-footer a{display:block;color:#b7c6d8;margin:8px 0;font-size:14px}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:35px;padding-top:20px;display:flex;justify-content:space-between;font-size:12px;color:#8fa2b8}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
-.to-top{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border:0;border-radius:50%;background:var(--blue);color:#fff;font-size:20px;z-index:900;box-shadow:var(--shadow);cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
-.to-top.show{opacity:1;pointer-events:auto}
-@media(max-width:900px){
- .navlinks{display:none}.menu{display:block}.phone{padding:12px}.nav-actions{margin-left:auto}
- .hero,.hero-inner{min-height:690px}.hero h1{letter-spacing:-2px}
- .cards{grid-template-columns:repeat(2,1fr)}.gallery-grid,.review-grid{grid-template-columns:1fr 1fr}
- .why-grid,.contact-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:620px){
- .container{width:min(100% - 28px,1180px)}.nav{height:68px}.brand-mark{width:44px;height:44px}.brand-name{font-size:17px}
- .phone{font-size:0;width:46px;height:46px;padding:0;display:grid;place-items:center}.phone:before{content:"☎";font-size:19px}
- .hero{min-height:720px;background:linear-gradient(180deg,rgba(5,25,48,.88) 0%,rgba(5,25,48,.72) 50%,rgba(5,25,48,.94) 100%),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85') center/cover}
- .hero-inner{min-height:720px;padding:45px 0;align-items:flex-end}.hero h1{font-size:46px}.hero .lead{font-size:16px}
- .hero-buttons{display:grid;grid-template-columns:1fr}.hero-points{gap:13px;justify-content:space-between}.hero-point{font-size:11px;flex-direction:column;text-align:center;gap:5px}.check{width:34px;height:34px}
- .section{padding:68px 0}.cards{grid-template-columns:1fr 1fr;gap:10px}.card img{height:130px}.card-body{padding:14px}.card h3{font-size:17px}.list li{font-size:12px}.gallery-grid,.review-grid,.faq-grid{grid-template-columns:1fr}.gallery-item{height:300px}
- .benefits{grid-template-columns:1fr 1fr}.benefit{padding:18px 10px}.benefit h3{font-size:15px}
- .contact-grid{gap:28px}.form{padding:20px}.footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-grid>div:first-child{grid-column:1/-1}
- .footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GIRARD PEINTURE — Peinture intérieure, extérieure, enduit façade et boiseries. Devis gratuit.">
+  <title>GIRARD PEINTURE — Artisan peintre</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
- <div class="container nav">
-  <a href="#accueil" class="brand">
-   <div class="brand-mark">⌂</div>
-   <div class="brand-name">GIRARD<span>PEINTURE</span></div>
-  </a>
-  <nav class="navlinks">
-   <a href="#accueil">Accueil</a><a href="#services">Nos services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
-  </nav>
-  <div class="nav-actions">
-   <a class="phone" href="tel:0618517866">☎ <span>06 18 51 78 66</span></a>
-   <button class="menu" aria-label="Menu">☰</button>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#accueil" aria-label="Girard Peinture">
+      <span class="logo-icon">⌂</span><span><b>GIRARD</b><small>PEINTURE</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#accueil">Accueil</a><a href="#services">Nos services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-phone" href="tel:0618517866">☎ <span>06 18 51 78 66</span></a>
+    <button class="menu" aria-label="Ouvrir le menu">☰</button>
   </div>
- </div>
+  <nav class="mobile-nav">
+    <a href="#accueil">Accueil</a><a href="#services">Nos services</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
 <section id="accueil" class="hero">
- <div class="container hero-inner">
-  <div class="hero-copy reveal">
-   <div class="eyebrow" style="color:#8ecbff">ARTISAN PEINTRE • SECTEUR LOCAL</div>
-   <h1>Un travail soigné<br>pour un résultat <span>durable.</span></h1>
-   <p class="lead">Transformez votre intérieur et vos façades avec des finitions propres, durables et professionnelles.</p>
-   <div class="hero-buttons">
-    <a class="btn btn-primary" href="#contact">▣ Demander un devis gratuit →</a>
-    <a class="btn btn-outline" href="tel:0618517866">☎ Appeler maintenant</a>
-   </div>
-   <div class="hero-points">
-    <div class="hero-point"><span class="check">✓</span>Devis gratuit</div>
-    <div class="hero-point"><span class="check">✓</span>Travail soigné</div>
-    <div class="hero-point"><span class="check">◷</span>Respect des délais</div>
-   </div>
+  <div class="hero-bg"></div>
+  <div class="container hero-content reveal">
+    <div class="eyebrow light">ARTISAN PEINTRE • SECTEUR LOCAL</div>
+    <h1>Un travail soigné<br>pour un résultat <em>durable.</em></h1>
+    <p>Transformez votre intérieur et vos façades avec des finitions propres, durables et professionnelles.</p>
+    <div class="hero-buttons">
+      <a class="btn primary" href="#contact">▣ Demander un devis gratuit →</a>
+      <a class="btn ghost" href="tel:0618517866">☎ Appeler maintenant</a>
+    </div>
+    <div class="trust-row">
+      <span><i>✓</i> Devis gratuit</span><span><i>✓</i> Travail soigné</span><span><i>◷</i> Respect des délais</span>
+    </div>
   </div>
- </div>
 </section>
 
-<section id="services" class="section services">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker"></div><div class="eyebrow">Nos services</div><h2>Des prestations complètes pour tous vos projets.</h2><p class="lead">Du conseil à la dernière finition, nous prenons soin de chaque détail.</p></div>
-  <div class="cards">
-   <article class="card reveal"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Peinture intérieure"><div class="card-body"><div class="icon">⌂</div><h3>Peinture intérieure</h3><ul class="list"><li>Murs & plafonds</li><li>Boiseries</li><li>Rénovation</li></ul><a class="card-link" href="#contact">Demander un devis →</a></div></article>
-   <article class="card reveal"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Peinture extérieure"><div class="card-body"><div class="icon">☀</div><h3>Peinture extérieure</h3><ul class="list"><li>Façades</li><li>Volets & portails</li><li>Boiseries extérieures</li></ul><a class="card-link" href="#contact">Demander un devis →</a></div></article>
-   <article class="card reveal"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Enduit façade"><div class="card-body"><div class="icon">▱</div><h3>Enduit façade</h3><ul class="list"><li>Ravalement</li><li>Enduit projeté</li><li>Enduit traditionnel</li></ul><a class="card-link" href="#contact">Demander un devis →</a></div></article>
-   <article class="card reveal"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Boiseries"><div class="card-body"><div class="icon">▰</div><h3>Boiseries</h3><ul class="list"><li>Portes & volets</li><li>Lasure & vernis</li><li>Rénovation</li></ul><a class="card-link" href="#contact">Demander un devis →</a></div></article>
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="dash"></span><div class="eyebrow">NOS SERVICES</div><h2>Des prestations complètes<br>pour tous vos projets.</h2><p>Du conseil à la dernière finition, nous prenons soin de chaque détail.</p></div>
+    <div class="service-grid">
+      <article class="service-card reveal"><img src="interieur.jpg" alt="Peinture intérieure"><div class="service-body"><span class="round-icon">⌂</span><h3>Peinture intérieure</h3><p>Murs, plafonds, boiseries et rénovation des pièces de vie.</p><ul><li>Murs & plafonds</li><li>Boiseries</li><li>Rénovation</li></ul><a href="#contact">Demander un devis →</a></div></article>
+      <article class="service-card featured reveal"><span class="popular">POPULAIRE</span><img src="facade.jpg" alt="Peinture extérieure"><div class="service-body"><span class="round-icon">☀</span><h3>Peinture extérieure</h3><p>Façades, volets, portails et boiseries extérieures.</p><ul><li>Façades</li><li>Volets & portails</li><li>Boiseries extérieures</li></ul><a href="#contact">Demander un devis →</a></div></article>
+      <article class="service-card reveal"><img src="facade.jpg" alt="Enduit façade"><div class="service-body"><span class="round-icon">▱</span><h3>Enduit façade</h3><p>Ravalement et solutions d'enduit adaptées à votre façade.</p><ul><li>Ravalement</li><li>Enduit projeté</li><li>Enduit traditionnel</li></ul><a href="#contact">Demander un devis →</a></div></article>
+      <article class="service-card reveal"><img src="reference.jpg" alt="Boiseries"><div class="service-body"><span class="round-icon">▰</span><h3>Boiseries</h3><p>Portes, volets, lasure, vernis et rénovation.</p><ul><li>Portes & volets</li><li>Lasure & vernis</li><li>Rénovation</li></ul><a href="#contact">Demander un devis →</a></div></article>
+    </div>
   </div>
- </div>
 </section>
 
-<section id="realisations" class="section gallery">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker"></div><div class="eyebrow" style="color:#5eb0ff">Nos réalisations</div><h2>Avant, après : le résultat fait la différence.</h2><p class="lead">Quelques exemples de travaux réalisés.</p></div>
-  <div class="gallery-grid">
-   <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Rénovation façade"><div class="gallery-text"><strong>Façade</strong><span>Rénovation extérieure</span></div></div>
-   <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Peinture intérieure"><div class="gallery-text"><strong>Intérieur</strong><span>Finitions murs & plafonds</span></div></div>
-   <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85" alt="Boiseries"><div class="gallery-text"><strong>Boiseries</strong><span>Rénovation & mise en peinture</span></div></div>
+<section id="realisations" class="section dark">
+  <div class="container">
+    <div class="section-title reveal"><span class="dash"></span><div class="eyebrow lightblue">NOS RÉALISATIONS</div><h2>Avant, après : le résultat<br>fait la différence.</h2><p>Quelques exemples de travaux réalisés.</p></div>
+    <div class="gallery">
+      <article class="gallery-card reveal"><img src="facade.jpg" alt="Façade"><div><b>Façade</b><span>Rénovation extérieure</span></div></article>
+      <article class="gallery-card reveal"><img src="interieur.jpg" alt="Intérieur"><div><b>Intérieur</b><span>Finitions murs & plafonds</span></div></article>
+      <article class="gallery-card reveal"><img src="realisations.jpg" alt="Avant après"><div><b>Avant / Après</b><span>Transformation d'une façade</span></div></article>
+    </div>
+    <div class="center"><a class="btn ghost" href="#contact">Voir toutes nos réalisations →</a></div>
   </div>
-  <div class="center"><a class="btn btn-outline" href="#contact">Voir toutes nos réalisations →</a></div>
- </div>
 </section>
 
-<section class="section why">
- <div class="container why-grid">
-  <div class="reveal"><div class="kicker"></div><div class="eyebrow">Pourquoi nous choisir ?</div><h2>Un partenaire de confiance pour vos travaux.</h2><p class="lead">Une approche simple : écoute, préparation, qualité d'exécution et chantier propre.</p></div>
-  <div class="benefits">
-   <div class="benefit reveal"><div class="icon">✓</div><h3>Finitions pro</h3><p>Un rendu impeccable</p></div>
-   <div class="benefit reveal"><div class="icon">€</div><h3>Devis gratuit</h3><p>Sans engagement</p></div>
-   <div class="benefit reveal"><div class="icon">◷</div><h3>Intervention rapide</h3><p>Dans les meilleurs délais</p></div>
-   <div class="benefit reveal"><div class="icon">◇</div><h3>Respect des délais</h3><p>Votre satisfaction d'abord</p></div>
+<section class="section benefits">
+  <div class="container">
+    <div class="section-title center-title reveal"><span class="dash"></span><div class="eyebrow">POURQUOI NOUS CHOISIR ?</div><h2>Un partenaire de confiance<br>pour vos travaux.</h2></div>
+    <div class="benefit-grid">
+      <div class="benefit reveal"><span>✓</span><h3>Finitions pro</h3><p>Un rendu impeccable</p></div>
+      <div class="benefit reveal"><span>€</span><h3>Devis gratuit</h3><p>Sans engagement</p></div>
+      <div class="benefit reveal"><span>◷</span><h3>Intervention rapide</h3><p>Dans les meilleurs délais</p></div>
+      <div class="benefit reveal"><span>◇</span><h3>Respect des délais</h3><p>Votre satisfaction d'abord</p></div>
+    </div>
   </div>
- </div>
 </section>
 
 <section id="avis" class="section reviews">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker"></div><div class="eyebrow">Ils nous font confiance</div><h2>Avis de nos clients</h2><p class="lead">Votre satisfaction est notre meilleure récompense.</p></div>
-  <div class="review-grid">
-   <article class="review reveal"><div class="stars">★★★★★</div><p>« Travail très soigné et équipe professionnelle. Notre façade est comme neuve ! »</p><strong>M. Laurent D.</strong><small>Rénovation façade</small></article>
-   <article class="review reveal"><div class="stars">★★★★★</div><p>« Peinture intérieure impeccable, chantier propre et dans les délais. Je recommande ! »</p><strong>Mme Carole P.</strong><small>Peinture intérieure</small></article>
-   <article class="review reveal"><div class="stars">★★★★★</div><p>« Très bon conseil et résultat au top pour nos volets. Entreprise sérieuse. »</p><strong>M. Thomas B.</strong><small>Rénovation boiseries</small></article>
+  <div class="container">
+    <div class="section-title reveal"><span class="dash"></span><div class="eyebrow">ILS NOUS FONT CONFIANCE</div><h2>Avis de nos clients</h2><p>Votre satisfaction est notre meilleure récompense.</p></div>
+    <div class="review-grid">
+      <article class="review reveal"><div class="stars">★★★★★</div><p>« Travail très soigné et équipe professionnelle. Notre façade est comme neuve ! »</p><b>M. Laurent D.</b><small>Rénovation façade</small></article>
+      <article class="review reveal"><div class="stars">★★★★★</div><p>« Peinture intérieure impeccable, chantier propre et dans les délais. Je recommande ! »</p><b>Mme Carole P.</b><small>Peinture intérieure</small></article>
+      <article class="review reveal"><div class="stars">★★★★★</div><p>« Très bon conseil et résultat au top pour nos volets. Entreprise sérieuse. »</p><b>M. Thomas B.</b><small>Rénovation boiseries</small></article>
+    </div>
   </div>
- </div>
 </section>
 
-<section id="contact" class="section contact">
- <div class="container contact-grid">
-  <div class="reveal"><div class="eyebrow" style="color:#c9e6ff">Votre projet commence ici</div><h2>Parlons de votre projet.</h2><p class="lead">Décrivez-nous vos travaux et obtenez un devis gratuit.</p><p class="contact-script">Contactez-nous dès maintenant !</p><p style="margin-top:25px;font-weight:700">☎ 06 18 51 78 66 &nbsp; • &nbsp; Réponse rapide</p></div>
-  <form class="form reveal" action="mailto:contact@girard-peinture.fr" method="post" enctype="text/plain">
-   <input name="nom" placeholder="Votre nom" required>
-   <input name="telephone" type="tel" placeholder="Téléphone" required>
-   <textarea name="projet" placeholder="Décrivez votre projet (type de travaux, surface, délai...)" required></textarea>
-   <button class="btn btn-primary" type="submit">Envoyer ma demande →</button>
-   <div class="form-note">Réponse rapide • Sans engagement</div>
-  </form>
- </div>
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy reveal"><div class="eyebrow light">VOTRE PROJET COMMENCE ICI</div><h2>Parlons de votre projet.</h2><p>Décrivez-nous vos travaux et obtenez un devis gratuit.</p><strong>Contactez-nous dès maintenant !</strong><div class="contact-info">☎ 06 18 51 78 66<br><span>Réponse rapide • Sans engagement</span></div></div>
+    <form class="quote-form reveal" action="mailto:contact@girard-peinture.fr" method="post" enctype="text/plain">
+      <input name="nom" placeholder="Votre nom" required>
+      <input name="telephone" placeholder="Téléphone" type="tel" required>
+      <textarea name="projet" placeholder="Décrivez votre projet (type de travaux, surface, délai...)" required></textarea>
+      <button class="btn primary" type="submit">Envoyer ma demande →</button>
+      <small>Réponse rapide • Sans engagement</small>
+    </form>
+  </div>
 </section>
 
 <section class="section faq">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker"></div><div class="eyebrow">Questions fréquentes</div><h2>Vos questions, nos réponses.</h2></div>
-  <div class="faq-grid">
-   <details class="reveal"><summary>Proposez-vous des devis gratuits ?</summary><p>Oui, la demande de devis est gratuite et sans engagement.</p></details>
-   <details class="reveal"><summary>Quels sont les délais d’intervention ?</summary><p>Ils dépendent du chantier. Contactez-nous pour connaître nos disponibilités.</p></details>
-   <details class="reveal"><summary>Quels types de travaux réalisez-vous ?</summary><p>Peinture intérieure, extérieure, façades, enduits et boiseries.</p></details>
-   <details class="reveal"><summary>Utilisez-vous des produits de qualité ?</summary><p>Nous privilégions des produits adaptés au support et au résultat recherché.</p></details>
-   <details class="reveal"><summary>Intervenez-vous dans ma région ?</summary><p>Nous intervenons dans notre secteur local. Appelez-nous pour vérifier votre adresse.</p></details>
-   <details class="reveal"><summary>Comment se déroule un chantier ?</summary><p>Échange sur le projet, préparation, protection, réalisation, finitions et contrôle du résultat.</p></details>
+  <div class="container">
+    <div class="section-title reveal"><span class="dash"></span><div class="eyebrow">QUESTIONS FRÉQUENTES</div><h2>Vos questions, nos réponses.</h2></div>
+    <div class="faq-grid">
+      <details class="reveal"><summary>Proposez-vous des devis gratuits ?</summary><p>Oui, la demande de devis est gratuite et sans engagement.</p></details>
+      <details class="reveal"><summary>Quels sont les délais d’intervention ?</summary><p>Ils dépendent du chantier et de nos disponibilités. Contactez-nous pour en discuter.</p></details>
+      <details class="reveal"><summary>Quels types de travaux réalisez-vous ?</summary><p>Peinture intérieure et extérieure, enduit façade et boiseries.</p></details>
+      <details class="reveal"><summary>Intervenez-vous dans ma région ?</summary><p>Nous intervenons dans notre secteur local. Appelez-nous pour vérifier votre adresse.</p></details>
+      <details class="reveal"><summary>Utilisez-vous des produits de qualité ?</summary><p>Nous choisissons les produits selon le support et le résultat recherché.</p></details>
+      <details class="reveal"><summary>Comment se déroule un chantier ?</summary><p>Échange sur le projet, préparation, protection, réalisation, finitions et contrôle.</p></details>
+    </div>
   </div>
- </div>
 </section>
 </main>
 
 <footer>
- <div class="container">
-  <div class="footer-grid">
-   <div><a href="#accueil" class="brand"><div class="brand-mark">⌂</div><div class="brand-name">GIRARD<span>PEINTURE</span></div></a><p style="margin-top:18px;font-size:14px;max-width:320px">Artisan peintre pour vos projets intérieurs et extérieurs. Un travail soigné, durable et de qualité dans votre secteur.</p></div>
-   <div><div class="footer-title">Navigation</div><a href="#accueil">Accueil</a><a href="#services">Nos services</a><a href="#realisations">Nos réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
-   <div><div class="footer-title">Nos services</div><a href="#services">Peinture intérieure</a><a href="#services">Peinture extérieure</a><a href="#services">Enduit façade</a><a href="#services">Boiseries</a></div>
-   <div><div class="footer-title">Contact</div><a href="tel:0618517866">☎ 06 18 51 78 66</a><a href="mailto:contact@girard-peinture.fr">✉ contact@girard-peinture.fr</a><a href="#contact">⌖ Secteur local</a></div>
+  <div class="container footer-grid">
+    <div><a class="logo footer-logo" href="#accueil"><span class="logo-icon">⌂</span><span><b>GIRARD</b><small>PEINTURE</small></span></a><p>Artisan peintre pour vos projets intérieurs et extérieurs. Un travail soigné, durable et de qualité dans votre secteur.</p></div>
+    <div><b>Navigation</b><a href="#accueil">Accueil</a><a href="#services">Nos services</a><a href="#realisations">Nos réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
+    <div><b>Nos services</b><a href="#services">Peinture intérieure</a><a href="#services">Peinture extérieure</a><a href="#services">Enduit façade</a><a href="#services">Boiseries</a></div>
+    <div><b>Contact</b><a href="tel:0618517866">☎ 06 18 51 78 66</a><a href="mailto:contact@girard-peinture.fr">✉ contact@girard-peinture.fr</a><span>⌖ Secteur local</span></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 GIRARD PEINTURE — Tous droits réservés.</span><span>Mentions légales &nbsp;|&nbsp; Politique de confidentialité</span></div>
- </div>
+  <div class="container footer-bottom">© 2026 GIRARD PEINTURE — Tous droits réservés.</div>
 </footer>
-
-<button class="to-top" aria-label="Retour en haut">↑</button>
-<script>
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const topBtn=document.querySelector('.to-top');
-addEventListener('scroll',()=>topBtn.classList.toggle('show',scrollY>500));
-topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
-document.querySelector('.menu').onclick=()=>{
- const nav=document.querySelector('.navlinks');
- const open=nav.style.display==='flex';
- nav.style.display=open?'none':'flex';
- if(!open){nav.style.position='absolute';nav.style.top='68px';nav.style.left='14px';nav.style.right='14px';nav.style.background='#fff';nav.style.padding='18px';nav.style.borderRadius='14px';nav.style.boxShadow='0 15px 35px rgba(15,35,62,.15)';nav.style.flexDirection='column';nav.style.gap='14px'}
-};
-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<901)document.querySelector('.navlinks').style.display='none'}));
-</script>
+<button class="top" aria-label="Retour en haut">↑</button>
+<script src="script.js"></script>
 </body>
 </html>
